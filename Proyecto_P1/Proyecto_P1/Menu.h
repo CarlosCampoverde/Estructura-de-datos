@@ -8,6 +8,7 @@ public:
     void ejecutar();
 
 private:
+    //bool esMayorDe18(const T& fechaNacimiento);
     bool validarCedula(const T& cedula);
     std::string obtenerHoraActual();
     void cargarRegistrosDesdeArchivo(const std::string& nombreArchivo);

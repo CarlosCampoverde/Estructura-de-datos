@@ -4,8 +4,7 @@
 #include <fstream>
 #include <string>
 #include <ctime>
-//#include <Windows.h>
-#include <cstdlib>
+#include <regex>
 
 using namespace std;
 
@@ -26,27 +25,79 @@ void Menu<T>::ejecutar() {
         switch (opcion) {
         case 1:
             registrarNuevoUsuario();
+            system("pause");
+            system("cls");
             break;
         case 2:
             ingresarConCedula();
+            system("pause");
+            system("cls");
             break;
         case 3:
             mostrarRegistros();
+            system("pause");
+            system("cls");
             break;
         case 4:
             cout << "Saliendo del programa..." << endl;
+            system("pause");
+            system("cls");
             break;
         default:
-            cout.flush();
-            system("cls");
             cout << "Opcion invalida. Por favor, ingrese una opcion valida." << endl;
-            
+            system("pause");
+            system("cls");
             break;
         }
     }
 
     const string nombreArchivo = "registros.txt";
     guardarRegistrosEnArchivo(nombreArchivo);
+}
+
+template<typename T>
+bool esMayorDe18(const T& fechaNacimiento) {
+    time_t now;
+    struct tm timeinfo;
+    time(&now);
+    localtime_s(&timeinfo, &now);
+    int currentYear = timeinfo.tm_year + 1900;
+    int currentMonth = timeinfo.tm_mon + 1;
+    int currentDay = timeinfo.tm_mday;
+
+    int userYear = stoi(fechaNacimiento.substr(0, 4));
+    int userMonth = stoi(fechaNacimiento.substr(5, 2));
+    int userDay = stoi(fechaNacimiento.substr(8, 2));
+
+    int age = currentYear - userYear;
+
+    if (currentMonth < userMonth || (currentMonth == userMonth && currentDay < userDay)) {
+        age--;
+    }
+    return age >= 18;
+}
+
+template<typename T>
+int calcularEdad(const T& fechaNacimiento) {
+    time_t now;
+    struct tm timeinfo;
+    time(&now);
+    localtime_s(&timeinfo, &now);
+    int currentYear = timeinfo.tm_year + 1900;
+    int currentMonth = timeinfo.tm_mon + 1;
+    int currentDay = timeinfo.tm_mday;
+
+    int userYear = stoi(fechaNacimiento.substr(0, 4));
+    int userMonth = stoi(fechaNacimiento.substr(5, 2));
+    int userDay = stoi(fechaNacimiento.substr(8, 2));
+
+    int age = currentYear - userYear;
+
+    if (currentMonth < userMonth || (currentMonth == userMonth && currentDay < userDay)) {
+        age--;
+    }
+
+    return age;
 }
 
 template<typename T>
@@ -112,19 +163,22 @@ void Menu<T>::cargarRegistrosDesdeArchivo(const string& nombreArchivo) {
 
     string linea;
     while (getline(archivo, linea)) {
-        size_t pos1 = linea.find(",");
-        size_t pos2 = linea.find(",", pos1 + 1);
-        size_t pos3 = linea.find(",", pos2 + 1);
-        size_t pos4 = linea.find(",", pos3 + 1);
+        size_t pos1 = linea.find("/");
+        size_t pos2 = linea.find("/", pos1 + 1);
+        size_t pos3 = linea.find("/", pos2 + 1);
+        size_t pos4 = linea.find("/", pos3 + 1);
+        size_t pos5 = linea.find("/", pos4 + 1);
+        size_t pos6 = linea.find("/", pos5 + 1);
 
         string cedula = linea.substr(0, pos1);
         string nombre = linea.substr(pos1 + 1, pos2 - pos1 - 1);
-        string horaEntrada = linea.substr(pos2 + 1, pos3 - pos2 - 1);
-        string horaAlmuerzo = linea.substr(pos3 + 1, pos4 - pos3 - 1);
-        string horaSalida = linea.substr(pos4 + 1);
-        listaPersonal.agregarRegistro(cedula, nombre, horaEntrada, horaAlmuerzo, horaSalida);
+        string fechaNacimiento = linea.substr(pos2 + 1, pos3 - pos2 - 1);
+        string edad = linea.substr(pos3 + 1, pos4 - pos3 - 1);
+        string horaEntrada = linea.substr(pos4 + 1, pos5 - pos4 - 1);
+        string horaAlmuerzo = linea.substr(pos5 + 1, pos6 - pos5 - 1);
+        string horaSalida = linea.substr(pos6 + 1);
+        listaPersonal.agregarRegistro(cedula, nombre, fechaNacimiento, edad, horaEntrada, horaAlmuerzo, horaSalida);
     }
-
     archivo.close();
 }
 
@@ -138,10 +192,12 @@ void Menu<T>::guardarRegistrosEnArchivo(const std::string& nombreArchivo) {
 
     Registro<T>* actual = listaPersonal.obtenerPrimerRegistro();
     while (actual) {
-        archivo << actual->cedula << ","
-            << actual->nombre << ","
-            << actual->horaEntrada << ","
-            << actual->horaAlmuerzo << ","
+        archivo << actual->cedula << " / "
+            << actual->nombre << " / "
+            << actual->fechaNacimiento<< " / "
+            << actual->edad<<" / "
+            << actual->horaEntrada << " / "
+            << actual->horaAlmuerzo << " / "
             << actual->horaSalida << endl;
         actual = actual->siguiente;
     }
@@ -151,7 +207,6 @@ void Menu<T>::guardarRegistrosEnArchivo(const std::string& nombreArchivo) {
 
 template<typename T>
 void Menu<T>::mostrarMenuPrincipal() {
-    
     cout << "MENU PRINCIPAL" << endl;
     cout << "1. Registrar nuevo usuario" << endl;
     cout << "2. Ingresar con cedula" << endl;
@@ -167,19 +222,25 @@ void Menu<T>::mostrarMenuRegistroUsuario() {
     cout << "2. Registrar hora de almuerzo" << endl;
     cout << "3. Registrar hora de salida" << endl;
     cout << "4. Volver al menu principal" << endl;
-    cout << "Ingrese su opción: ";
+    cout << "Ingrese su opcion: ";
 }
 
 template<typename T>
 void Menu<T>::registrarNuevoUsuario() {
     T cedula;
-    cout << "Ingrese la cedula: ";
-    cin.ignore();
-    getline(cin, cedula);
+    bool cedulaValida = false;
 
-    if (!validarCedula(cedula)) {
-        cout << "Cedula invalida. Ingrese una cedula valida." << endl;
-        return;
+    while (!cedulaValida) {
+        cout << "Ingrese la cedula: ";
+        cin.ignore();
+        getline(cin, cedula);
+
+        if (!validarCedula(cedula)) {
+            cout << "Cedula invalida. Ingrese una cedula valida." << endl;
+        }
+        else {
+            cedulaValida = true;
+        }
     }
 
     if (listaPersonal.existeUsuario(cedula)) {
@@ -187,44 +248,37 @@ void Menu<T>::registrarNuevoUsuario() {
         return;
     }
 
+    string fechaNacimiento;
+    bool fechaValida = false;
+
+    while (!fechaValida) {
+        cout << "Ingrese la fecha de nacimiento (YYYY-MM-DD): ";
+        getline(cin, fechaNacimiento);
+
+        if (!esMayorDe18(fechaNacimiento)) {
+            cout << "El usuario debe ser mayor de 18 años para ser registrado." << endl;
+        }
+        else {
+            fechaValida = true;
+        }
+    }
+
+    int edadStr = calcularEdad(fechaNacimiento);
+    string edad = to_string(edadStr);
+    cout << "Tu edad es: " << edad << " años." << endl;
+
+
     string nombre;
-    cout << "Ingrese el nombre: ";
+    regex nombreRegex("[A-Za-z ]+"); //expresión para validar cadenas
+    cout << "Ingrese el nombre del usuario: ";
     getline(cin, nombre);
-    int diaNacimiento;
-    int mesNacimiento;
-    int anioNacimiento;
-    int edad;
 
-    cout << "Ingrese el dia de nacimiento: ";
-    getline(cin, diaNacimiento);
-    cout << "Ingrese el mes de nacimiento: ";
-    getline(cin, mesNacimiento);
-    cout << "Ingrese el año de nacimiento: ";
-    getline(cin, anioNacimiento);
-    time_t tiempo = time(NULL);
-    struct tm* fechaActual = localtime(&tiempo);
-    int anioActual = fechaActual->tm_year + 1900;
-    int mesActual = fechaActual->tm_mon + 1;
-    int diaActual = fechaActual->tm_mday;
-
-    // Calcular la diferencia en años
-    int edad = anioActual - anioNacimiento;
-
-    // Comparar el mes de nacimiento con el mes actual
-    if (mesActual < mesNacimiento) {
-        edad--;
-    }
-    // Si el mes actual es igual al mes de nacimiento,
-    // comparar el día de nacimiento con el día actual
-    else if (mesActual == mesNacimiento && diaActual < diaNacimiento) {
-        edad--;
+    while (!regex_match(nombre, nombreRegex)) {
+        cout << "El nombre ingresado es invalido. \n\tIngrese un nombre valido: ";
+        getline(cin, nombre);
     }
 
-    
-   
-
-
-    listaPersonal.agregarRegistro(cedula, nombre,edad, "", "", "");
+    listaPersonal.agregarRegistro(cedula, nombre, fechaNacimiento, edad, "", "", "");
     cout << "Se registro al usuario con cedula " << cedula << endl;
 }
 
@@ -255,25 +309,33 @@ void Menu<T>::ingresarConCedula() {
             string horaEntrada = obtenerHoraActual();
             listaPersonal.registrarHoraEntrada(cedula, horaEntrada);
             cout << "Se registro la hora de entrada: " << horaEntrada << endl;
+            system("pause");
+            system("cls");
             break;
         }
         case 2: {
             string horaAlmuerzo = obtenerHoraActual();
             listaPersonal.registrarHoraAlmuerzo(cedula, horaAlmuerzo);
             cout << "Se registro la hora de almuerzo: " << horaAlmuerzo << endl;
+            system("pause");
+            system("cls");
             break;
         }
         case 3: {
             string horaSalida = obtenerHoraActual();
             listaPersonal.registrarHoraSalida(cedula, horaSalida);
             cout << "Se registro la hora de salida: " << horaSalida << endl;
+            system("pause");
+            system("cls");
             break;
         }
         case 4:
-            cout << "Volviendo al men principal..." << endl;
+            cout << "Volviendo al menu principal..." << endl;
             break;
         default:
             cout << "Opcion invalida. Por favor, ingrese una opcion valida." << endl;
+            system("pause");
+            system("cls");
             break;
         }
     }

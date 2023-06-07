@@ -6,8 +6,8 @@ Registro<T>* ListaPersonal<T>::obtenerPrimerRegistro() const {
 }
 
 template<typename T>
-void ListaPersonal<T>::agregarRegistro(const T& cedula, const T& nombre, const T& edad, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida) {
-    Registro<T>* nuevo = new Registro<T>(cedula, nombre, edad, horaEntrada, horaAlmuerzo, horaSalida);
+void ListaPersonal<T>::agregarRegistro(const T& cedula, const T& nombre, const T& fechaNacimiento, const T& edad, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida) {
+    Registro<T>* nuevo = new Registro<T>(cedula, nombre, fechaNacimiento, edad, horaEntrada, horaAlmuerzo, horaSalida);
 
     if (!primero) {
         primero = nuevo;
@@ -74,6 +74,8 @@ void ListaPersonal<T>::mostrarRegistros() {
     while (actual) {
         std::cout << "Cedula: " << actual->cedula << std::endl;
         std::cout << "Nombre: " << actual->nombre << std::endl;
+        std::cout << "Fecha de Nacimiento: " << actual->fechaNacimiento << std::endl;
+        std::cout << "Edad: " << actual->edad << std::endl;
         std::cout << "Hora de entrada: " << actual->horaEntrada << std::endl;
         std::cout << "Hora de almuerzo: " << actual->horaAlmuerzo << std::endl;
         std::cout << "Hora de salida: " << actual->horaSalida << std::endl;

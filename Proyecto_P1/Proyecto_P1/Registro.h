@@ -5,18 +5,15 @@ template<typename T>
 struct Registro {
     T cedula;
     T nombre;
-    T diaNacimiento;
-    T mesNacimiento;
-    T anioNacimiento;
+    T fechaNacimiento;
     T edad;
     T horaEntrada;
     T horaAlmuerzo;
     T horaSalida;
-    std::string fechaNacimiento;
     Registro* siguiente;
     Registro* anterior;
 
-    Registro(const T& cedula, const T& nombre, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida, const std::string& fechaNacimiento)
-        : cedula(cedula), nombre(nombre), horaEntrada(horaEntrada), horaAlmuerzo(horaAlmuerzo), horaSalida(horaSalida),
-        fechaNacimiento(fechaNacimiento), siguiente(nullptr), anterior(nullptr) {}
+    Registro(const T& cedula, const T& nombre, const T& fechaNacimiento, const T& edad, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida)
+        : cedula(cedula), nombre(nombre), fechaNacimiento(fechaNacimiento), edad(edad), horaEntrada(horaEntrada), horaAlmuerzo(horaAlmuerzo), horaSalida(horaSalida),
+        siguiente(nullptr), anterior(nullptr) {}
 };

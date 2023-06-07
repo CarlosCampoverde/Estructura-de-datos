@@ -8,13 +8,11 @@ class ListaPersonal {
 private:
     Registro<T>* primero;
     Registro<T>* ultimo;
-    std::string fechaNacimiento;
-    int edad;
 
 public:
     ListaPersonal() : primero(nullptr), ultimo(nullptr) {}
     Registro<T>* obtenerPrimerRegistro() const;
-    void agregarRegistro(const T& cedula, const T& nombre, const T& edad, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida);
+    void agregarRegistro(const T& cedula, const T& nombre, const T& fechaNacimiento, const T& edad, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida);
     bool existeUsuario(const T& cedula);
     void registrarHoraEntrada(const T& cedula, const T& horaEntrada);
     void registrarHoraAlmuerzo(const T& cedula, const T& horaAlmuerzo);
