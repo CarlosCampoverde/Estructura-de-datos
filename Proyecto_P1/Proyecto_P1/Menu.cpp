@@ -190,10 +190,41 @@ void Menu<T>::registrarNuevoUsuario() {
     string nombre;
     cout << "Ingrese el nombre: ";
     getline(cin, nombre);
+    int diaNacimiento;
+    int mesNacimiento;
+    int anioNacimiento;
+    int edad;
+
+    cout << "Ingrese el dia de nacimiento: ";
+    getline(cin, diaNacimiento);
+    cout << "Ingrese el mes de nacimiento: ";
+    getline(cin, mesNacimiento);
+    cout << "Ingrese el año de nacimiento: ";
+    getline(cin, anioNacimiento);
+    time_t tiempo = time(NULL);
+    struct tm* fechaActual = localtime(&tiempo);
+    int anioActual = fechaActual->tm_year + 1900;
+    int mesActual = fechaActual->tm_mon + 1;
+    int diaActual = fechaActual->tm_mday;
+
+    // Calcular la diferencia en años
+    int edad = anioActual - anioNacimiento;
+
+    // Comparar el mes de nacimiento con el mes actual
+    if (mesActual < mesNacimiento) {
+        edad--;
+    }
+    // Si el mes actual es igual al mes de nacimiento,
+    // comparar el día de nacimiento con el día actual
+    else if (mesActual == mesNacimiento && diaActual < diaNacimiento) {
+        edad--;
+    }
+
+    
+   
 
 
-
-    listaPersonal.agregarRegistro(cedula, nombre, "", "", "");
+    listaPersonal.agregarRegistro(cedula, nombre,edad, "", "", "");
     cout << "Se registro al usuario con cedula " << cedula << endl;
 }
 

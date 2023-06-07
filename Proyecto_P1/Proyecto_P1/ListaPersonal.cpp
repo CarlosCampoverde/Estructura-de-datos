@@ -6,8 +6,8 @@ Registro<T>* ListaPersonal<T>::obtenerPrimerRegistro() const {
 }
 
 template<typename T>
-void ListaPersonal<T>::agregarRegistro(const T& cedula, const T& nombre, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida) {
-    Registro<T>* nuevo = new Registro<T>(cedula, nombre, horaEntrada, horaAlmuerzo, horaSalida);
+void ListaPersonal<T>::agregarRegistro(const T& cedula, const T& nombre, const T& edad, const T& horaEntrada, const T& horaAlmuerzo, const T& horaSalida) {
+    Registro<T>* nuevo = new Registro<T>(cedula, nombre, edad, horaEntrada, horaAlmuerzo, horaSalida);
 
     if (!primero) {
         primero = nuevo;

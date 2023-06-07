@@ -1,7 +1,96 @@
 ﻿  ListaPersonal.cpp
-D:\Proyecto_P1\Proyecto_P1\Registro.h(15,27): error C3861: 'nombre': no se encontró el identificador
-D:\Proyecto_P1\Proyecto_P1\Registro.h(17,2): message : Vea la referencia a la creación de una instancia de clase plantilla "Registro<T>" que se está compilando
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\ListaPersonal.cpp(10,41): error C2665: 'Registro<T>::Registro':ninguna función sobrecargada pudo convertir todos los tipos de argumento
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Registro.h(19,5): message : puede ser 'Registro<T>::Registro(const T &,const T &,const T &,const T &,const T &,const std::string &)'
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\ListaPersonal.cpp(10,41): message : 'Registro<T>::Registro(const T &,const T &,const T &,const T &,const T &,const std::string &)': el argumento 6 no puede convertirse de 'const T' a 'const std::string &'
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\ListaPersonal.cpp(10,91): message : Razón: no se puede realizar la conversión de 'const T' a 'const std::string'
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\ListaPersonal.cpp(10,91): message : Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\ListaPersonal.cpp(10,41): message : al hacer coincidir la lista de argumentos '(const T, const T, const T, const T, const T, const T)'
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\ListaPersonal.cpp(9,155): message : al compilar la función del miembro clase plantilla "void ListaPersonal<int>::agregarRegistro(const T &,const T &,const T &,const T &,const T &,const T &)"
+          with
+          [
+              T=int
+          ]
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\ListaPersonal.cpp(88,34): message : Vea la referencia a la creación de una instancia de clase plantilla "ListaPersonal<int>" que se está compilando
+  main.cpp
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): error C2672: 'getline': no se encontró una función sobrecargada que coincida
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(83,32): message : puede ser 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(76,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(69,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(26,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "getline": la declaración de función debe estar disponible, ya que ninguno de los argumentos depende de un parámetro de plantilla
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): error C2672: 'getline': no se encontró una función sobrecargada que coincida
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(83,32): message : puede ser 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(76,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(69,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(26,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "getline": la declaración de función debe estar disponible, ya que ninguno de los argumentos depende de un parámetro de plantilla
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): error C2672: 'getline': no se encontró una función sobrecargada que coincida
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(83,32): message : puede ser 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(76,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(69,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(26,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "getline": la declaración de función debe estar disponible, ya que ninguno de los argumentos depende de un parámetro de plantilla
   Menu.cpp
-D:\Proyecto_P1\Proyecto_P1\Registro.h(15,27): error C3861: 'nombre': no se encontró el identificador
-D:\Proyecto_P1\Proyecto_P1\Registro.h(17,2): message : Vea la referencia a la creación de una instancia de clase plantilla "Registro<T>" que se está compilando
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): error C2672: 'getline': no se encontró una función sobrecargada que coincida
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(83,32): message : puede ser 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(76,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(69,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(26,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(199,12): message : "getline": la declaración de función debe estar disponible, ya que ninguno de los argumentos depende de un parámetro de plantilla
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): error C2672: 'getline': no se encontró una función sobrecargada que coincida
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(83,32): message : puede ser 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(76,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(69,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(26,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(201,12): message : "getline": la declaración de función debe estar disponible, ya que ninguno de los argumentos depende de un parámetro de plantilla
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): error C2672: 'getline': no se encontró una función sobrecargada que coincida
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(83,32): message : puede ser 'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(76,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(69,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &)": no se pudo deducir el argumento plantilla para "std::basic_string<_Elem,_Traits,_Alloc> &" de "int"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\string(26,32): message : o       'std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)'
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "std::basic_istream<_Elem,_Traits> &std::getline(std::basic_istream<_Elem,_Traits> &&,std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem)": espera 3 argumentos - 2 proporcionado
+C:\Users\PC\Desktop\Estructura-de-datos\Proyecto_P1\Proyecto_P1\Menu.cpp(203,12): message : "getline": la declaración de función debe estar disponible, ya que ninguno de los argumentos depende de un parámetro de plantilla
   Generando código...
