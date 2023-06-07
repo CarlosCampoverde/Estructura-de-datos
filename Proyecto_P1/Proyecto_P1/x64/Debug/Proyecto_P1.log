@@ -1,0 +1,7 @@
+﻿  ListaPersonal.cpp
+D:\Proyecto_P1\Proyecto_P1\Registro.h(15,27): error C3861: 'nombre': no se encontró el identificador
+D:\Proyecto_P1\Proyecto_P1\Registro.h(17,2): message : Vea la referencia a la creación de una instancia de clase plantilla "Registro<T>" que se está compilando
+  Menu.cpp
+D:\Proyecto_P1\Proyecto_P1\Registro.h(15,27): error C3861: 'nombre': no se encontró el identificador
+D:\Proyecto_P1\Proyecto_P1\Registro.h(17,2): message : Vea la referencia a la creación de una instancia de clase plantilla "Registro<T>" que se está compilando
+  Generando código...
