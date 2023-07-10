@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Calculadora Polaca: Fichero Fuente Poland_Calculator/Poland_Calculator/Nodo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="polaca.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Calculadora Polaca
+   &#160;<span id="projectnumber">Grupo_5</span>
+   </div>
+   <div id="projectbrief">Realiza las operaciones de la Calculadara Polaca</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_121eaba95b3081e3baeb6a8e056eff2f.html">Poland_Calculator</a></li><li class="navelem"><a class="el" href="dir_fc96288409b99794b4e40744ab5a5667.html">Poland_Calculator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Nodo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_nodo_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_nodo.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_nodo.html">Nodo</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    T dato;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* siguiente;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>(T, <a class="code" href="class_nodo.html">Nodo</a>*);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    T <a class="code" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">get_dato</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nodo.html#a470a1c3e615b5eb8e2508695e2446721">set_dato</a>(T);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* <a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">set_siguiente</a>(<a class="code" href="class_nodo.html">Nodo</a>*);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_nodo.html#a24a0a39dfbb45cb4321ece5e9888fa3f">   63</a></span>&#160;<a class="code" href="class_nodo.html#a24a0a39dfbb45cb4321ece5e9888fa3f">Nodo&lt;T&gt;::Nodo</a>(T val, <a class="code" href="class_nodo.html">Nodo</a>* sig)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    sig = NULL;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    this-&gt;dato = val;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    this-&gt;siguiente = sig;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">   70</a></span>&#160;T <a class="code" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">Nodo&lt;T&gt;::get_dato</a>()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> this-&gt;dato;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">catch</span> (...)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Error&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_nodo.html#a470a1c3e615b5eb8e2508695e2446721">   84</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_nodo.html#a470a1c3e615b5eb8e2508695e2446721">Nodo&lt;T&gt;::set_dato</a>(T val)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    this-&gt;dato = val;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">   91</a></span>&#160;<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* <a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">Nodo&lt;T&gt;::get_siguiente</a>()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> this-&gt;siguiente;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">Nodo&lt;T&gt;::set_siguiente</a>(<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* nuevo)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    this-&gt;siguiente = nuevo;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//#include &quot;Nodo.cpp&quot;</span></div>
+<div class="ttc" id="aclass_nodo_html"><div class="ttname"><a href="class_nodo.html">Nodo</a></div><div class="ttdef"><b>Definition:</b> Nodo.h:21</div></div>
+<div class="ttc" id="aclass_nodo_html_a0b609ab697169fc75342a5dfe135d16b"><div class="ttname"><a href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">Nodo::get_siguiente</a></div><div class="ttdeci">Nodo&lt; T &gt; * get_siguiente()</div><div class="ttdoc">Get the siguiente object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:91</div></div>
+<div class="ttc" id="aclass_nodo_html_a24a0a39dfbb45cb4321ece5e9888fa3f"><div class="ttname"><a href="class_nodo.html#a24a0a39dfbb45cb4321ece5e9888fa3f">Nodo::Nodo</a></div><div class="ttdeci">Nodo(T, Nodo *)</div><div class="ttdoc">Construct a new Nodo&lt; T&gt; object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:63</div></div>
+<div class="ttc" id="aclass_nodo_html_a3de64adee05e899d89bb62e4283dd454"><div class="ttname"><a href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">Nodo::get_dato</a></div><div class="ttdeci">T get_dato()</div><div class="ttdoc">Get the dato object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:70</div></div>
+<div class="ttc" id="aclass_nodo_html_a470a1c3e615b5eb8e2508695e2446721"><div class="ttname"><a href="class_nodo.html#a470a1c3e615b5eb8e2508695e2446721">Nodo::set_dato</a></div><div class="ttdeci">void set_dato(T)</div><div class="ttdoc">Set the dato object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:84</div></div>
+<div class="ttc" id="aclass_nodo_html_a611c012bf5ebfab975ca7dc62e249a45"><div class="ttname"><a href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">Nodo::set_siguiente</a></div><div class="ttdeci">void set_siguiente(Nodo *)</div><div class="ttdoc">Set the siguiente object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:96</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Calculadora Polaca: Fichero Fuente Poland_Calculator/Poland_Calculator/Operation.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="polaca.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Calculadora Polaca
+   &#160;<span id="projectnumber">Grupo_5</span>
+   </div>
+   <div id="projectbrief">Realiza las operaciones de la Calculadara Polaca</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_121eaba95b3081e3baeb6a8e056eff2f.html">Poland_Calculator</a></li><li class="navelem"><a class="el" href="dir_fc96288409b99794b4e40744ab5a5667.html">Poland_Calculator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Operation.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_operation_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="mystring_8h.html">mystring.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_stack_8h.html">Stack.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_operation.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_operation.html">Operation</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a2086821225ce4a419ffc01560bae47bd">infix_to_prefix</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;string&gt;</a> <a class="code" href="class_operation.html#a80161d51d46c5ba199ed7c026be2b08b">infix_to_prefix1</a>(<a class="code" href="class_stack.html">Stack&lt;string&gt;</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a331c32fc018aa9cb81e93a6caeb26186">infix_to_postfix</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;string&gt;</a> <a class="code" href="class_operation.html#ad1653607d798dcb77ab7676cacf45c4d">infix_to_postfix1</a>(<a class="code" href="class_stack.html">Stack&lt;string&gt;</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a5c804af96f3be1bad07f59f06b18382f">infix_to_funtional</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a95e0f84590c4ad3159b9113095e32b51">prefix_to_infix</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a8f09c28e6b233b55f0c0d6bcd50f2dea">prefix_to_postfix</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a2a1eaf717e9caa05a35d74d984de8145">prefix_to_funtional</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#aaf62b08f84c686c569aa9cd883332a74">postfix_to_infix</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a6f5bd7940f4267fb444da3b2dde202bd">postfix_to_prefix</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#a967ffc389dabec68ed1f6e58462042c7">postfix_to_funtional</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#a2cc174295816609d827df11ac0d6f659">is_operator</a>(<span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#a725adb95e3df37d76722b5b9b494978c">is_operator1</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#adad92bd11894f90770bdc568d4f08f66">is_trig_fun</a>(<span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#a0e0592f5198f2c20c7b95710d10f5c5f">is_trig_fun1</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#ac124d31bc6780429f81c10bcebdfe621">is_operand</a>(<span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_operation.html#a07062e6f0c40067b0c6c4c25d77a6dd1">precedence</a>(<span class="keywordtype">char</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_operation.html#abd18661de62005de06323f4412c1d400">precedence1</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_operation.html#a139c6c02d19db0df13af81cd7e3c4db5">calculate</a>(<a class="code" href="class_stack.html">Stack&lt;string&gt;</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;string&gt;</a> <a class="code" href="class_operation.html#a91aa9d06397a51c0253b90bfe7ef507b">ingresar_datos</a>();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;string&gt;</a> <a class="code" href="class_operation.html#a01a0d5194be31dcb0fc7ba9cee4ba9c1">ingresar_datos_enteros</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;string&gt;</a> <a class="code" href="class_operation.html#acfaead886b54557665d3b83083bbc515">invertir_pila</a>(<a class="code" href="class_stack.html">Stack&lt;string&gt;</a>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;string&gt;</a> <a class="code" href="class_operation.html#a1b5640a53bfe1dd3b8b3e9fd4f90df0d">copiar_pila</a>(<a class="code" href="class_stack.html">Stack&lt;string&gt;</a>);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;string&gt;</a> <a class="code" href="class_operation.html#aacd233e04c4d9c28793e0dfae7954fbf">desencolar_pila_cifrada</a>(<a class="code" href="class_stack.html">Stack&lt;string&gt;</a>,<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_operation.html#af9b0a54e7219e04f4f58ff25101ab0c1">cifrar</a>(<span class="keywordtype">string</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_operation.html#a6fe3d98ab29d752797ed2908b40a26a8">evaluar_expresion</a>(<a class="code" href="class_stack.html">Stack&lt;string&gt;</a>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="class_operation.html#ab79fa7cc24f601d605b8e24f0f46b89c">ingreso</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>*);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="ttc" id="a_stack_8h_html"><div class="ttname"><a href="_stack_8h.html">Stack.h</a></div></div>
+<div class="ttc" id="aclass_operation_html"><div class="ttname"><a href="class_operation.html">Operation</a></div><div class="ttdef"><b>Definition:</b> Operation.h:19</div></div>
+<div class="ttc" id="aclass_operation_html_a01a0d5194be31dcb0fc7ba9cee4ba9c1"><div class="ttname"><a href="class_operation.html#a01a0d5194be31dcb0fc7ba9cee4ba9c1">Operation::ingresar_datos_enteros</a></div><div class="ttdeci">Stack&lt; string &gt; ingresar_datos_enteros()</div><div class="ttdef"><b>Definition:</b> Operation.cpp:391</div></div>
+<div class="ttc" id="aclass_operation_html_a07062e6f0c40067b0c6c4c25d77a6dd1"><div class="ttname"><a href="class_operation.html#a07062e6f0c40067b0c6c4c25d77a6dd1">Operation::precedence</a></div><div class="ttdeci">int precedence(char)</div><div class="ttdoc">char precedente</div><div class="ttdef"><b>Definition:</b> Operation.cpp:190</div></div>
+<div class="ttc" id="aclass_operation_html_a0e0592f5198f2c20c7b95710d10f5c5f"><div class="ttname"><a href="class_operation.html#a0e0592f5198f2c20c7b95710d10f5c5f">Operation::is_trig_fun1</a></div><div class="ttdeci">bool is_trig_fun1(string)</div><div class="ttdoc">comprobar trigonometrica</div><div class="ttdef"><b>Definition:</b> Operation.cpp:988</div></div>
+<div class="ttc" id="aclass_operation_html_a139c6c02d19db0df13af81cd7e3c4db5"><div class="ttname"><a href="class_operation.html#a139c6c02d19db0df13af81cd7e3c4db5">Operation::calculate</a></div><div class="ttdeci">double calculate(Stack&lt; string &gt;)</div><div class="ttdoc">calcular</div><div class="ttdef"><b>Definition:</b> Operation.cpp:218</div></div>
+<div class="ttc" id="aclass_operation_html_a1b5640a53bfe1dd3b8b3e9fd4f90df0d"><div class="ttname"><a href="class_operation.html#a1b5640a53bfe1dd3b8b3e9fd4f90df0d">Operation::copiar_pila</a></div><div class="ttdeci">Stack&lt; string &gt; copiar_pila(Stack&lt; string &gt;)</div><div class="ttdoc">copiar pila</div><div class="ttdef"><b>Definition:</b> Operation.cpp:433</div></div>
+<div class="ttc" id="aclass_operation_html_a2086821225ce4a419ffc01560bae47bd"><div class="ttname"><a href="class_operation.html#a2086821225ce4a419ffc01560bae47bd">Operation::infix_to_prefix</a></div><div class="ttdeci">string infix_to_prefix(string)</div><div class="ttdoc">infix a prefix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:23</div></div>
+<div class="ttc" id="aclass_operation_html_a2a1eaf717e9caa05a35d74d984de8145"><div class="ttname"><a href="class_operation.html#a2a1eaf717e9caa05a35d74d984de8145">Operation::prefix_to_funtional</a></div><div class="ttdeci">string prefix_to_funtional(string)</div><div class="ttdoc">prefix a funcional</div><div class="ttdef"><b>Definition:</b> Operation.cpp:831</div></div>
+<div class="ttc" id="aclass_operation_html_a2cc174295816609d827df11ac0d6f659"><div class="ttname"><a href="class_operation.html#a2cc174295816609d827df11ac0d6f659">Operation::is_operator</a></div><div class="ttdeci">bool is_operator(char)</div><div class="ttdoc">comprobar operador</div><div class="ttdef"><b>Definition:</b> Operation.cpp:964</div></div>
+<div class="ttc" id="aclass_operation_html_a331c32fc018aa9cb81e93a6caeb26186"><div class="ttname"><a href="class_operation.html#a331c32fc018aa9cb81e93a6caeb26186">Operation::infix_to_postfix</a></div><div class="ttdeci">string infix_to_postfix(string)</div><div class="ttdoc">infix a postfix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:654</div></div>
+<div class="ttc" id="aclass_operation_html_a5c804af96f3be1bad07f59f06b18382f"><div class="ttname"><a href="class_operation.html#a5c804af96f3be1bad07f59f06b18382f">Operation::infix_to_funtional</a></div><div class="ttdeci">string infix_to_funtional(string)</div><div class="ttdoc">infix a funcional</div><div class="ttdef"><b>Definition:</b> Operation.cpp:815</div></div>
+<div class="ttc" id="aclass_operation_html_a6f5bd7940f4267fb444da3b2dde202bd"><div class="ttname"><a href="class_operation.html#a6f5bd7940f4267fb444da3b2dde202bd">Operation::postfix_to_prefix</a></div><div class="ttdeci">string postfix_to_prefix(string)</div><div class="ttdoc">postfix a prefix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:922</div></div>
+<div class="ttc" id="aclass_operation_html_a6fe3d98ab29d752797ed2908b40a26a8"><div class="ttname"><a href="class_operation.html#a6fe3d98ab29d752797ed2908b40a26a8">Operation::evaluar_expresion</a></div><div class="ttdeci">bool evaluar_expresion(Stack&lt; string &gt;)</div><div class="ttdef"><b>Definition:</b> Operation.cpp:493</div></div>
+<div class="ttc" id="aclass_operation_html_a725adb95e3df37d76722b5b9b494978c"><div class="ttname"><a href="class_operation.html#a725adb95e3df37d76722b5b9b494978c">Operation::is_operator1</a></div><div class="ttdeci">bool is_operator1(string)</div><div class="ttdoc">comprobar operador</div><div class="ttdef"><b>Definition:</b> Operation.cpp:972</div></div>
+<div class="ttc" id="aclass_operation_html_a80161d51d46c5ba199ed7c026be2b08b"><div class="ttname"><a href="class_operation.html#a80161d51d46c5ba199ed7c026be2b08b">Operation::infix_to_prefix1</a></div><div class="ttdeci">Stack&lt; string &gt; infix_to_prefix1(Stack&lt; string &gt;)</div><div class="ttdoc">infix a prefix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:103</div></div>
+<div class="ttc" id="aclass_operation_html_a8f09c28e6b233b55f0c0d6bcd50f2dea"><div class="ttname"><a href="class_operation.html#a8f09c28e6b233b55f0c0d6bcd50f2dea">Operation::prefix_to_postfix</a></div><div class="ttdeci">string prefix_to_postfix(string)</div><div class="ttdoc">prefix a postfix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:826</div></div>
+<div class="ttc" id="aclass_operation_html_a91aa9d06397a51c0253b90bfe7ef507b"><div class="ttname"><a href="class_operation.html#a91aa9d06397a51c0253b90bfe7ef507b">Operation::ingresar_datos</a></div><div class="ttdeci">Stack&lt; string &gt; ingresar_datos()</div><div class="ttdoc">ingresar datos</div><div class="ttdef"><b>Definition:</b> Operation.cpp:327</div></div>
+<div class="ttc" id="aclass_operation_html_a95e0f84590c4ad3159b9113095e32b51"><div class="ttname"><a href="class_operation.html#a95e0f84590c4ad3159b9113095e32b51">Operation::prefix_to_infix</a></div><div class="ttdeci">string prefix_to_infix(string)</div><div class="ttdoc">prefix a infix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:820</div></div>
+<div class="ttc" id="aclass_operation_html_a967ffc389dabec68ed1f6e58462042c7"><div class="ttname"><a href="class_operation.html#a967ffc389dabec68ed1f6e58462042c7">Operation::postfix_to_funtional</a></div><div class="ttdeci">string postfix_to_funtional(string)</div><div class="ttdoc">postfix a funcional</div><div class="ttdef"><b>Definition:</b> Operation.cpp:959</div></div>
+<div class="ttc" id="aclass_operation_html_aacd233e04c4d9c28793e0dfae7954fbf"><div class="ttname"><a href="class_operation.html#aacd233e04c4d9c28793e0dfae7954fbf">Operation::desencolar_pila_cifrada</a></div><div class="ttdeci">Stack&lt; string &gt; desencolar_pila_cifrada(Stack&lt; string &gt;, int)</div><div class="ttdef"><b>Definition:</b> Operation.cpp:447</div></div>
+<div class="ttc" id="aclass_operation_html_aaf62b08f84c686c569aa9cd883332a74"><div class="ttname"><a href="class_operation.html#aaf62b08f84c686c569aa9cd883332a74">Operation::postfix_to_infix</a></div><div class="ttdeci">string postfix_to_infix(string)</div><div class="ttdoc">postfix a infix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:917</div></div>
+<div class="ttc" id="aclass_operation_html_ab79fa7cc24f601d605b8e24f0f46b89c"><div class="ttname"><a href="class_operation.html#ab79fa7cc24f601d605b8e24f0f46b89c">Operation::ingreso</a></div><div class="ttdeci">char * ingreso(const char *)</div><div class="ttdef"><b>Definition:</b> Operation.cpp:639</div></div>
+<div class="ttc" id="aclass_operation_html_abd18661de62005de06323f4412c1d400"><div class="ttname"><a href="class_operation.html#abd18661de62005de06323f4412c1d400">Operation::precedence1</a></div><div class="ttdeci">int precedence1(string)</div><div class="ttdoc">elemento precedente</div><div class="ttdef"><b>Definition:</b> Operation.cpp:204</div></div>
+<div class="ttc" id="aclass_operation_html_ac124d31bc6780429f81c10bcebdfe621"><div class="ttname"><a href="class_operation.html#ac124d31bc6780429f81c10bcebdfe621">Operation::is_operand</a></div><div class="ttdeci">bool is_operand(char)</div><div class="ttdoc">comprobar operando</div><div class="ttdef"><b>Definition:</b> Operation.cpp:996</div></div>
+<div class="ttc" id="aclass_operation_html_acfaead886b54557665d3b83083bbc515"><div class="ttname"><a href="class_operation.html#acfaead886b54557665d3b83083bbc515">Operation::invertir_pila</a></div><div class="ttdeci">Stack&lt; string &gt; invertir_pila(Stack&lt; string &gt;)</div><div class="ttdoc">invertir pila</div><div class="ttdef"><b>Definition:</b> Operation.cpp:419</div></div>
+<div class="ttc" id="aclass_operation_html_ad1653607d798dcb77ab7676cacf45c4d"><div class="ttname"><a href="class_operation.html#ad1653607d798dcb77ab7676cacf45c4d">Operation::infix_to_postfix1</a></div><div class="ttdeci">Stack&lt; string &gt; infix_to_postfix1(Stack&lt; string &gt;)</div><div class="ttdoc">infix a postfix</div><div class="ttdef"><b>Definition:</b> Operation.cpp:722</div></div>
+<div class="ttc" id="aclass_operation_html_adad92bd11894f90770bdc568d4f08f66"><div class="ttname"><a href="class_operation.html#adad92bd11894f90770bdc568d4f08f66">Operation::is_trig_fun</a></div><div class="ttdeci">bool is_trig_fun(char)</div><div class="ttdoc">comprobar char trigonometrica</div><div class="ttdef"><b>Definition:</b> Operation.cpp:980</div></div>
+<div class="ttc" id="aclass_operation_html_af9b0a54e7219e04f4f58ff25101ab0c1"><div class="ttname"><a href="class_operation.html#af9b0a54e7219e04f4f58ff25101ab0c1">Operation::cifrar</a></div><div class="ttdeci">string cifrar(string, int)</div><div class="ttdef"><b>Definition:</b> Operation.cpp:464</div></div>
+<div class="ttc" id="aclass_stack_html"><div class="ttname"><a href="class_stack.html">Stack</a></div><div class="ttdef"><b>Definition:</b> Stack.h:24</div></div>
+<div class="ttc" id="amystring_8h_html"><div class="ttname"><a href="mystring_8h.html">mystring.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Calculadora Polaca: Fichero Fuente Poland_Calculator/Poland_Calculator/Stack.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="polaca.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Calculadora Polaca
+   &#160;<span id="projectnumber">Grupo_5</span>
+   </div>
+   <div id="projectbrief">Realiza las operaciones de la Calculadara Polaca</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_121eaba95b3081e3baeb6a8e056eff2f.html">Poland_Calculator</a></li><li class="navelem"><a class="el" href="dir_fc96288409b99794b4e40744ab5a5667.html">Poland_Calculator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Stack.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_stack_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_nodo_8h.html">Nodo.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_stack.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_stack.html">Stack</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* primero;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* actual;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> StackVacia();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> empty_stack();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;T&gt;</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> insertar_por_la_cola(T);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> set_primero(<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>*);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* get_primero();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> set_actual(<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>*);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* get_actual();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> insertar_por_la_cabeza(T);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> borrar_por_la_cola();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> borrar_por_la_cabeza();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> mostrar();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> mostrar_expresion();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> mostrar_expresion_invertida();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">void</span> llenar_aleatorio_lista();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> vaciar_lista();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    T maximo_comun_divisor(T);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    T contar_elementos();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;};</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="class_stack.html#ae13d6c727e191e931ee1bf321f1c22da">  148</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#ae13d6c727e191e931ee1bf321f1c22da">Stack&lt;T&gt;::mostrar</a>()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temporal = this-&gt;primero;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">while</span> (temporal) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        cout &lt;&lt; temporal-&gt;<a class="code" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">get_dato</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        temporal = temporal-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_stack.html#ac6c4727c3041ea65d0cc774a2b3dafbd">  159</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#ac6c4727c3041ea65d0cc774a2b3dafbd">Stack&lt;T&gt;::mostrar_expresion</a>()</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temporal = this-&gt;primero;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">while</span> (temporal) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        cout &lt;&lt; temporal-&gt;<a class="code" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">get_dato</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        temporal = temporal-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_stack.html#aff2d6dbb70b5cc860c498595406ddec4">  170</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#aff2d6dbb70b5cc860c498595406ddec4">Stack&lt;T&gt;::mostrar_expresion_invertida</a>()</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="class_stack.html">Stack&lt;T&gt;</a> copia;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temporal = this-&gt;primero;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">while</span> (temporal) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="comment">//cout &lt;&lt; temporal-&gt;get_dato() &lt;&lt; &quot; &quot;;</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        copia.<a class="code" href="class_stack.html#a81c866a5f89dc7447a999a2f4167d74f">insertar_por_la_cabeza</a>(temporal-&gt;<a class="code" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">get_dato</a>());</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        temporal = temporal-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    temporal = copia.<a class="code" href="class_stack.html#a56810f220a36e3dfe9202924c97c7026">get_primero</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">while</span> (temporal) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        cout &lt;&lt; temporal-&gt;<a class="code" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">get_dato</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">//copia.insertar_por_la_cabeza(temporal-&gt;get_dato());</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        temporal = temporal-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">//copia.vaciar_lista();</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="class_stack.html#a1fbaec2144fe9c55b971c7b12619c0a7">  191</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a1fbaec2144fe9c55b971c7b12619c0a7">Stack&lt;T&gt;::vaciar_lista</a>() {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">while</span> (StackVacia()) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        borrar_por_la_cola();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00197"></a><span class="lineno"><a class="line" href="class_stack.html#a99a84be6747eb3b47152220146f8dde3">  197</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_stack.html#a99a84be6747eb3b47152220146f8dde3">Stack&lt;T&gt;::StackVacia</a>()</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">return</span> (this-&gt;primero == NULL);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="class_stack.html#a3e3aaa27d47c605f94c90e079fdeaf3b">  202</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_stack.html#a3e3aaa27d47c605f94c90e079fdeaf3b">Stack&lt;T&gt;::empty_stack</a>()</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> (this-&gt;primero == NULL);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_stack.html#aefee698059467258bbd79045aca62a63">  207</a></span>&#160;<a class="code" href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack&lt;T&gt;::Stack</a>()</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    this-&gt;primero = NULL;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    this-&gt;actual = NULL;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="class_stack.html#a7d2f13a6ab158621444ee726ccdeaaff">  213</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a7d2f13a6ab158621444ee726ccdeaaff">Stack&lt;T&gt;::insertar_por_la_cola</a>(T val)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* nuevo = <span class="keyword">new</span> <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>(val, NULL);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> (StackVacia()) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        this-&gt;primero = nuevo;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        this-&gt;actual-&gt;<a class="code" href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">set_siguiente</a>(nuevo);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    this-&gt;actual = nuevo;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="class_stack.html#a13b438a14cfbdb55e3b2260d7a780d5f">  225</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a13b438a14cfbdb55e3b2260d7a780d5f">Stack&lt;T&gt;::set_primero</a>(<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* new_primero) {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    this-&gt;primero = new_primero;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="class_stack.html#a56810f220a36e3dfe9202924c97c7026">  229</a></span>&#160;<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* <a class="code" href="class_stack.html#a56810f220a36e3dfe9202924c97c7026">Stack&lt;T&gt;::get_primero</a>() {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">return</span> primero;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;}</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="class_stack.html#a482ba92a32881333d613e2b0daf7acc0">  233</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a482ba92a32881333d613e2b0daf7acc0">Stack&lt;T&gt;::set_actual</a>(<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* new_actual) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    this-&gt;actual = new_actual;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_stack.html#a0c90981750519b0e1eb43e0f6769802c">  237</a></span>&#160;<a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* <a class="code" href="class_stack.html#a0c90981750519b0e1eb43e0f6769802c">Stack&lt;T&gt;::get_actual</a>() {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> actual;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="class_stack.html#a81c866a5f89dc7447a999a2f4167d74f">  241</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a81c866a5f89dc7447a999a2f4167d74f">Stack&lt;T&gt;::insertar_por_la_cabeza</a>(T val)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* nuevo = <span class="keyword">new</span> <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>(val, NULL);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (StackVacia()) {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        this-&gt;actual = nuevo;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        nuevo-&gt;<a class="code" href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">set_siguiente</a>(this-&gt;primero);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    this-&gt;primero = nuevo;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="class_stack.html#aebb193cea2f26f96a135b21209b9c710">  254</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#aebb193cea2f26f96a135b21209b9c710">Stack&lt;T&gt;::borrar_por_la_cola</a>()</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">if</span> (!StackVacia()) {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temp = this-&gt;actual;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temp1 = this-&gt;primero;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">while</span> (temp1-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>()-&gt;get_siguiente() != NULL) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            temp1 = temp1-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        temp1-&gt;<a class="code" href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">set_siguiente</a>(NULL);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        this-&gt;actual = temp1;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        free(temp);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="class_stack.html#a4d087391c363e20044dbbfc66c0c9312">  268</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#a4d087391c363e20044dbbfc66c0c9312">Stack&lt;T&gt;::borrar_por_la_cabeza</a>()</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">if</span> (!StackVacia()) {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temp;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        temp = this-&gt;primero;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        this-&gt;primero = this-&gt;primero-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        free(temp);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="class_stack.html#aca0c91a7293e14b81c9bd137281eff6b">  278</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_stack.html#aca0c91a7293e14b81c9bd137281eff6b">Stack&lt;T&gt;::llenar_aleatorio_lista</a>()</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temp = this-&gt;primero;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    std::srand(std::time(<span class="keyword">nullptr</span>));</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordtype">int</span> aleatorio = 0;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">while</span> (aleatorio != 5) {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        aleatorio = 1 + rand() % (6);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">if</span> (aleatorio == 2 || aleatorio == 4) {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            insertar_por_la_cola(aleatorio);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="class_stack.html#a3c8f0a84a06b47d79da59ecc5646cac9">  294</a></span>&#160;T <a class="code" href="class_stack.html#a3c8f0a84a06b47d79da59ecc5646cac9">Stack&lt;T&gt;::maximo_comun_divisor</a>(T elementos)</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;{</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">int</span> mcd = 0;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">int</span> contador = 0;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temporal = this-&gt;primero;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; 1000; i++) {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        contador = 0;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        temporal = this-&gt;primero;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">while</span> (temporal) {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">if</span> (temporal-&gt;<a class="code" href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">get_dato</a>() % i == 0) {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                contador = contador + 1;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            temporal = temporal-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">if</span> (elementos == contador) {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            mcd = i;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">return</span> T(mcd);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00322"></a><span class="lineno"><a class="line" href="class_stack.html#ab9227eb27040d7f85591f9e408a0d385">  322</a></span>&#160;T <a class="code" href="class_stack.html#ab9227eb27040d7f85591f9e408a0d385">Stack&lt;T&gt;::contar_elementos</a>()</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordtype">int</span> elementos = 0;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <a class="code" href="class_nodo.html">Nodo&lt;T&gt;</a>* temporal = this-&gt;primero;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">while</span> (temporal) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        elementos = elementos + 1;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        temporal = temporal-&gt;<a class="code" href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">get_siguiente</a>();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keywordflow">return</span> T(elementos);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="ttc" id="a_nodo_8h_html"><div class="ttname"><a href="_nodo_8h.html">Nodo.h</a></div></div>
+<div class="ttc" id="aclass_nodo_html"><div class="ttname"><a href="class_nodo.html">Nodo</a></div><div class="ttdef"><b>Definition:</b> Nodo.h:21</div></div>
+<div class="ttc" id="aclass_nodo_html_a0b609ab697169fc75342a5dfe135d16b"><div class="ttname"><a href="class_nodo.html#a0b609ab697169fc75342a5dfe135d16b">Nodo::get_siguiente</a></div><div class="ttdeci">Nodo&lt; T &gt; * get_siguiente()</div><div class="ttdoc">Get the siguiente object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:91</div></div>
+<div class="ttc" id="aclass_nodo_html_a3de64adee05e899d89bb62e4283dd454"><div class="ttname"><a href="class_nodo.html#a3de64adee05e899d89bb62e4283dd454">Nodo::get_dato</a></div><div class="ttdeci">T get_dato()</div><div class="ttdoc">Get the dato object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:70</div></div>
+<div class="ttc" id="aclass_nodo_html_a611c012bf5ebfab975ca7dc62e249a45"><div class="ttname"><a href="class_nodo.html#a611c012bf5ebfab975ca7dc62e249a45">Nodo::set_siguiente</a></div><div class="ttdeci">void set_siguiente(Nodo *)</div><div class="ttdoc">Set the siguiente object.</div><div class="ttdef"><b>Definition:</b> Nodo.h:96</div></div>
+<div class="ttc" id="aclass_stack_html"><div class="ttname"><a href="class_stack.html">Stack</a></div><div class="ttdef"><b>Definition:</b> Stack.h:24</div></div>
+<div class="ttc" id="aclass_stack_html_a0c90981750519b0e1eb43e0f6769802c"><div class="ttname"><a href="class_stack.html#a0c90981750519b0e1eb43e0f6769802c">Stack::get_actual</a></div><div class="ttdeci">Nodo&lt; T &gt; * get_actual()</div><div class="ttdoc">Get the actual object.</div><div class="ttdef"><b>Definition:</b> Stack.h:237</div></div>
+<div class="ttc" id="aclass_stack_html_a13b438a14cfbdb55e3b2260d7a780d5f"><div class="ttname"><a href="class_stack.html#a13b438a14cfbdb55e3b2260d7a780d5f">Stack::set_primero</a></div><div class="ttdeci">void set_primero(Nodo&lt; T &gt; *)</div><div class="ttdoc">Set the primero object.</div><div class="ttdef"><b>Definition:</b> Stack.h:225</div></div>
+<div class="ttc" id="aclass_stack_html_a1fbaec2144fe9c55b971c7b12619c0a7"><div class="ttname"><a href="class_stack.html#a1fbaec2144fe9c55b971c7b12619c0a7">Stack::vaciar_lista</a></div><div class="ttdeci">void vaciar_lista()</div><div class="ttdoc">Vaciar Lista.</div><div class="ttdef"><b>Definition:</b> Stack.h:191</div></div>
+<div class="ttc" id="aclass_stack_html_a3c8f0a84a06b47d79da59ecc5646cac9"><div class="ttname"><a href="class_stack.html#a3c8f0a84a06b47d79da59ecc5646cac9">Stack::maximo_comun_divisor</a></div><div class="ttdeci">T maximo_comun_divisor(T)</div><div class="ttdoc">MCD.</div><div class="ttdef"><b>Definition:</b> Stack.h:294</div></div>
+<div class="ttc" id="aclass_stack_html_a3e3aaa27d47c605f94c90e079fdeaf3b"><div class="ttname"><a href="class_stack.html#a3e3aaa27d47c605f94c90e079fdeaf3b">Stack::empty_stack</a></div><div class="ttdeci">bool empty_stack()</div><div class="ttdoc">Comprobar pila vacia.</div><div class="ttdef"><b>Definition:</b> Stack.h:202</div></div>
+<div class="ttc" id="aclass_stack_html_a482ba92a32881333d613e2b0daf7acc0"><div class="ttname"><a href="class_stack.html#a482ba92a32881333d613e2b0daf7acc0">Stack::set_actual</a></div><div class="ttdeci">void set_actual(Nodo&lt; T &gt; *)</div><div class="ttdoc">Set the actual object.</div><div class="ttdef"><b>Definition:</b> Stack.h:233</div></div>
+<div class="ttc" id="aclass_stack_html_a4d087391c363e20044dbbfc66c0c9312"><div class="ttname"><a href="class_stack.html#a4d087391c363e20044dbbfc66c0c9312">Stack::borrar_por_la_cabeza</a></div><div class="ttdeci">void borrar_por_la_cabeza()</div><div class="ttdoc">Borrar por cabeza.</div><div class="ttdef"><b>Definition:</b> Stack.h:268</div></div>
+<div class="ttc" id="aclass_stack_html_a56810f220a36e3dfe9202924c97c7026"><div class="ttname"><a href="class_stack.html#a56810f220a36e3dfe9202924c97c7026">Stack::get_primero</a></div><div class="ttdeci">Nodo&lt; T &gt; * get_primero()</div><div class="ttdoc">Get the primero object.</div><div class="ttdef"><b>Definition:</b> Stack.h:229</div></div>
+<div class="ttc" id="aclass_stack_html_a7d2f13a6ab158621444ee726ccdeaaff"><div class="ttname"><a href="class_stack.html#a7d2f13a6ab158621444ee726ccdeaaff">Stack::insertar_por_la_cola</a></div><div class="ttdeci">void insertar_por_la_cola(T)</div><div class="ttdoc">insertar por cola</div><div class="ttdef"><b>Definition:</b> Stack.h:213</div></div>
+<div class="ttc" id="aclass_stack_html_a81c866a5f89dc7447a999a2f4167d74f"><div class="ttname"><a href="class_stack.html#a81c866a5f89dc7447a999a2f4167d74f">Stack::insertar_por_la_cabeza</a></div><div class="ttdeci">void insertar_por_la_cabeza(T)</div><div class="ttdoc">Insertar por cabezas.</div><div class="ttdef"><b>Definition:</b> Stack.h:241</div></div>
+<div class="ttc" id="aclass_stack_html_a99a84be6747eb3b47152220146f8dde3"><div class="ttname"><a href="class_stack.html#a99a84be6747eb3b47152220146f8dde3">Stack::StackVacia</a></div><div class="ttdeci">bool StackVacia()</div><div class="ttdoc">comprobar pila vacia</div><div class="ttdef"><b>Definition:</b> Stack.h:197</div></div>
+<div class="ttc" id="aclass_stack_html_ab9227eb27040d7f85591f9e408a0d385"><div class="ttname"><a href="class_stack.html#ab9227eb27040d7f85591f9e408a0d385">Stack::contar_elementos</a></div><div class="ttdeci">T contar_elementos()</div><div class="ttdoc">Contar elementos.</div><div class="ttdef"><b>Definition:</b> Stack.h:322</div></div>
+<div class="ttc" id="aclass_stack_html_ac6c4727c3041ea65d0cc774a2b3dafbd"><div class="ttname"><a href="class_stack.html#ac6c4727c3041ea65d0cc774a2b3dafbd">Stack::mostrar_expresion</a></div><div class="ttdeci">void mostrar_expresion()</div><div class="ttdoc">Ver Expresion.</div><div class="ttdef"><b>Definition:</b> Stack.h:159</div></div>
+<div class="ttc" id="aclass_stack_html_aca0c91a7293e14b81c9bd137281eff6b"><div class="ttname"><a href="class_stack.html#aca0c91a7293e14b81c9bd137281eff6b">Stack::llenar_aleatorio_lista</a></div><div class="ttdeci">void llenar_aleatorio_lista()</div><div class="ttdoc">Llenar lista aleatorio.</div><div class="ttdef"><b>Definition:</b> Stack.h:278</div></div>
+<div class="ttc" id="aclass_stack_html_ae13d6c727e191e931ee1bf321f1c22da"><div class="ttname"><a href="class_stack.html#ae13d6c727e191e931ee1bf321f1c22da">Stack::mostrar</a></div><div class="ttdeci">void mostrar()</div><div class="ttdoc">Mostrar.</div><div class="ttdef"><b>Definition:</b> Stack.h:148</div></div>
+<div class="ttc" id="aclass_stack_html_aebb193cea2f26f96a135b21209b9c710"><div class="ttname"><a href="class_stack.html#aebb193cea2f26f96a135b21209b9c710">Stack::borrar_por_la_cola</a></div><div class="ttdeci">void borrar_por_la_cola()</div><div class="ttdoc">Borrar por cola.</div><div class="ttdef"><b>Definition:</b> Stack.h:254</div></div>
+<div class="ttc" id="aclass_stack_html_aefee698059467258bbd79045aca62a63"><div class="ttname"><a href="class_stack.html#aefee698059467258bbd79045aca62a63">Stack::Stack</a></div><div class="ttdeci">Stack()</div><div class="ttdoc">Construct a new Stack&lt; T&gt; object.</div><div class="ttdef"><b>Definition:</b> Stack.h:207</div></div>
+<div class="ttc" id="aclass_stack_html_aff2d6dbb70b5cc860c498595406ddec4"><div class="ttname"><a href="class_stack.html#aff2d6dbb70b5cc860c498595406ddec4">Stack::mostrar_expresion_invertida</a></div><div class="ttdeci">void mostrar_expresion_invertida()</div><div class="ttdoc">Mostrar Expresion Invetida.</div><div class="ttdef"><b>Definition:</b> Stack.h:170</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

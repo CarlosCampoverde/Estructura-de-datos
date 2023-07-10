@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Calculadora Polaca: Fichero Fuente Poland_Calculator/Poland_Calculator/Utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="polaca.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Calculadora Polaca
+   &#160;<span id="projectnumber">Grupo_5</span>
+   </div>
+   <div id="projectbrief">Realiza las operaciones de la Calculadara Polaca</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_121eaba95b3081e3baeb6a8e056eff2f.html">Poland_Calculator</a></li><li class="navelem"><a class="el" href="dir_fc96288409b99794b4e40744ab5a5667.html">Poland_Calculator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Utils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_utils_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ios&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;regex&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;conio.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespace_utils.html">   30</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_utils.html">Utils</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_utils_1_1_validation.html">   32</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_utils_1_1_validation.html">Validation</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#a9ae4eb37c3c94721e6be95b03f10f7a3">validate_string</a>(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#a5c156d88211bf6baf2ccb6a4ff410bc2">validate_input_number</a>(<span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#a5c156d88211bf6baf2ccb6a4ff410bc2">validate_input_number</a>(<span class="keywordtype">double</span>&amp;);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#a5c156d88211bf6baf2ccb6a4ff410bc2">validate_input_number</a>(<span class="keywordtype">float</span>&amp;);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#a1fc20b2b57475f494f783628f44c26b3">validate_three_digits</a>(<span class="keywordtype">long</span> number);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">static</span> T <a class="code" href="class_utils_1_1_validation.html#aea8f3672fe10e99048dcc7d1d63ed672">validation_numbers</a>(std::string);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">long</span> <a class="code" href="class_utils_1_1_validation.html#a9a16fc992ba2368f192c4cb2e6a408fd">validateDigits</a>(<span class="keywordtype">int</span> digits);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code" href="class_utils_1_1_validation.html#a18eab63278675385bf24b52a6c7292bd">validate_float</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#aa24bb2fbaa5f193fe20932d9c7277ae4">validate_id</a>(std::string&amp;);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#ac59721354550229ebbca33c8536e5e0d">is_digit</a>(<span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#a43ff2831bb56faa8aed6225bb9bfaf52">validate_date</a>(std::string );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_utils_1_1_validation.html#a920ac2a71c3df54bd2b6b3e9097a8d24">validate_date_of_birth</a>(std::string input);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    };</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;   </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_utils_1_1_generator.html">  128</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_utils_1_1_generator.html">Generator</a></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_utils_1_1_generator.html#a8de2c8c9a84b016f2b1afb8524364fe2">random_int</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="class_utils_1_1_generator.html#a6127796f461fa7a4241f8b97d62bab49">return_current_time_and_date</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_utils_1_1_generator.html#a1634ac5d4930dd36318bda686e671129">calculate_age</a>(std::string );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">//static std::string create_email(LinkedList&lt;Person&gt;, std::string, std::string);</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="class_utils_1_1_generator.html#a4afd06db776d8e8860f73ae36cb6f1b7">lower_case</a>(std::string);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="class_utils_1_1_generator.html#aee12597ba2d0730628d83a04692929de">to_string</a>(<span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    };</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="namespace_utils.html">  177</a></span>&#160;    <span class="keyword">class </span><a class="code" href="namespace_utils.html#class_utils_1_1_matha_matrix">MathaMatrix</a></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    };</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="ttc" id="aclass_utils_1_1_generator_html"><div class="ttname"><a href="class_utils_1_1_generator.html">Utils::Generator</a></div><div class="ttdef"><b>Definition:</b> Utils.h:129</div></div>
+<div class="ttc" id="aclass_utils_1_1_generator_html_a1634ac5d4930dd36318bda686e671129"><div class="ttname"><a href="class_utils_1_1_generator.html#a1634ac5d4930dd36318bda686e671129">Utils::Generator::calculate_age</a></div><div class="ttdeci">static int calculate_age(std::string)</div><div class="ttdoc">calcular edad</div><div class="ttdef"><b>Definition:</b> Utils.cpp:411</div></div>
+<div class="ttc" id="aclass_utils_1_1_generator_html_a4afd06db776d8e8860f73ae36cb6f1b7"><div class="ttname"><a href="class_utils_1_1_generator.html#a4afd06db776d8e8860f73ae36cb6f1b7">Utils::Generator::lower_case</a></div><div class="ttdeci">static std::string lower_case(std::string)</div><div class="ttdoc">Create a email object.</div><div class="ttdef"><b>Definition:</b> Utils.cpp:484</div></div>
+<div class="ttc" id="aclass_utils_1_1_generator_html_a6127796f461fa7a4241f8b97d62bab49"><div class="ttname"><a href="class_utils_1_1_generator.html#a6127796f461fa7a4241f8b97d62bab49">Utils::Generator::return_current_time_and_date</a></div><div class="ttdeci">static std::string return_current_time_and_date()</div><div class="ttdoc">regresa fecha actual</div><div class="ttdef"><b>Definition:</b> Utils.cpp:401</div></div>
+<div class="ttc" id="aclass_utils_1_1_generator_html_a8de2c8c9a84b016f2b1afb8524364fe2"><div class="ttname"><a href="class_utils_1_1_generator.html#a8de2c8c9a84b016f2b1afb8524364fe2">Utils::Generator::random_int</a></div><div class="ttdeci">static int random_int(const int, const int)</div><div class="ttdoc">generar aleatorio</div><div class="ttdef"><b>Definition:</b> Utils.cpp:391</div></div>
+<div class="ttc" id="aclass_utils_1_1_generator_html_aee12597ba2d0730628d83a04692929de"><div class="ttname"><a href="class_utils_1_1_generator.html#aee12597ba2d0730628d83a04692929de">Utils::Generator::to_string</a></div><div class="ttdeci">static std::string to_string(double)</div><div class="ttdoc">double a string</div><div class="ttdef"><b>Definition:</b> Utils.cpp:490</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html"><div class="ttname"><a href="class_utils_1_1_validation.html">Utils::Validation</a></div><div class="ttdef"><b>Definition:</b> Utils.h:33</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_a18eab63278675385bf24b52a6c7292bd"><div class="ttname"><a href="class_utils_1_1_validation.html#a18eab63278675385bf24b52a6c7292bd">Utils::Validation::validate_float</a></div><div class="ttdeci">static float validate_float()</div><div class="ttdoc">Valida que se ingresen solo numeros decimales por el teclado (con getch())</div><div class="ttdef"><b>Definition:</b> Utils.cpp:159</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_a1fc20b2b57475f494f783628f44c26b3"><div class="ttname"><a href="class_utils_1_1_validation.html#a1fc20b2b57475f494f783628f44c26b3">Utils::Validation::validate_three_digits</a></div><div class="ttdeci">static bool validate_three_digits(long number)</div><div class="ttdoc">valida un numero que sea de 3 digitos</div><div class="ttdef"><b>Definition:</b> Utils.cpp:132</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_a43ff2831bb56faa8aed6225bb9bfaf52"><div class="ttname"><a href="class_utils_1_1_validation.html#a43ff2831bb56faa8aed6225bb9bfaf52">Utils::Validation::validate_date</a></div><div class="ttdeci">static bool validate_date(std::string)</div><div class="ttdoc">valida fecha</div><div class="ttdef"><b>Definition:</b> Utils.cpp:215</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_a5c156d88211bf6baf2ccb6a4ff410bc2"><div class="ttname"><a href="class_utils_1_1_validation.html#a5c156d88211bf6baf2ccb6a4ff410bc2">Utils::Validation::validate_input_number</a></div><div class="ttdeci">static bool validate_input_number(int &amp;)</div><div class="ttdoc">Validacion la entrada por teclado de un tipo int.</div><div class="ttdef"><b>Definition:</b> Utils.cpp:96</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_a920ac2a71c3df54bd2b6b3e9097a8d24"><div class="ttname"><a href="class_utils_1_1_validation.html#a920ac2a71c3df54bd2b6b3e9097a8d24">Utils::Validation::validate_date_of_birth</a></div><div class="ttdeci">static bool validate_date_of_birth(std::string input)</div><div class="ttdoc">valida fecha de nacimiento</div><div class="ttdef"><b>Definition:</b> Utils.cpp:303</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_a9a16fc992ba2368f192c4cb2e6a408fd"><div class="ttname"><a href="class_utils_1_1_validation.html#a9a16fc992ba2368f192c4cb2e6a408fd">Utils::Validation::validateDigits</a></div><div class="ttdeci">static long validateDigits(int digits)</div><div class="ttdef"><b>Definition:</b> Utils.cpp:142</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_a9ae4eb37c3c94721e6be95b03f10f7a3"><div class="ttname"><a href="class_utils_1_1_validation.html#a9ae4eb37c3c94721e6be95b03f10f7a3">Utils::Validation::validate_string</a></div><div class="ttdeci">static bool validate_string(const std::string &amp;)</div><div class="ttdoc">Valida que una cadena de caracteres solo sea letras.</div><div class="ttdef"><b>Definition:</b> Utils.cpp:82</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_aa24bb2fbaa5f193fe20932d9c7277ae4"><div class="ttname"><a href="class_utils_1_1_validation.html#aa24bb2fbaa5f193fe20932d9c7277ae4">Utils::Validation::validate_id</a></div><div class="ttdeci">static bool validate_id(std::string &amp;)</div><div class="ttdoc">valida cedula</div><div class="ttdef"><b>Definition:</b> Utils.cpp:19</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_ac59721354550229ebbca33c8536e5e0d"><div class="ttname"><a href="class_utils_1_1_validation.html#ac59721354550229ebbca33c8536e5e0d">Utils::Validation::is_digit</a></div><div class="ttdeci">static bool is_digit(const std::string &amp;)</div><div class="ttdoc">verifica digito</div><div class="ttdef"><b>Definition:</b> Utils.cpp:70</div></div>
+<div class="ttc" id="aclass_utils_1_1_validation_html_aea8f3672fe10e99048dcc7d1d63ed672"><div class="ttname"><a href="class_utils_1_1_validation.html#aea8f3672fe10e99048dcc7d1d63ed672">Utils::Validation::validation_numbers</a></div><div class="ttdeci">static T validation_numbers(std::string)</div><div class="ttdoc">Valida un numero de cualquier tipo.</div><div class="ttdef"><b>Definition:</b> Utils.cpp:189</div></div>
+<div class="ttc" id="anamespace_utils_html"><div class="ttname"><a href="namespace_utils.html">Utils</a></div><div class="ttdef"><b>Definition:</b> Utils.h:31</div></div>
+<div class="ttc" id="anamespace_utils_html_class_utils_1_1_matha_matrix"><div class="ttname"><a href="namespace_utils.html#class_utils_1_1_matha_matrix">Utils::MathaMatrix</a></div><div class="ttdef"><b>Definition:</b> Utils.h:178</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
